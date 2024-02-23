@@ -74,7 +74,10 @@ const callback = () =>
                 .then(response => response.json())
                 .then(data => {
                     console.log('Данные пользователя успешно отправлены:');
-                    if('user_id' in data) console.log('+');
+                    if('user_id' in data) {
+                        console.log('+');
+                        window.location.replace("menu/menu.html");
+                    }
                 })
                 .catch(error => {
                     console.error('Произошла ошибка при отправке данных:', error);
