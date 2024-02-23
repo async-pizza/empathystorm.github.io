@@ -43,7 +43,6 @@ const callback = () =>
             .then(data => {
                 console.log('Данные пользователя успешно отправлены:');
                 if('id' in data) console.log('+');
-                window.location.replace("www.youtube.com");
             })
             .catch(error => {
                 console.error('Произошла ошибка при отправке данных:', error);
@@ -75,10 +74,7 @@ const callback = () =>
                 .then(response => response.json())
                 .then(data => {
                     console.log('Данные пользователя успешно отправлены:');
-                    if('user_id' in data) {
-                        console.log('+');
-                    }
-
+                    if('user_id' in data) {window.location.href = 'podwerjdenia.html?id=' + data['user_id'] +"&email="+email;}
                 })
                 .catch(error => {
                     console.error('Произошла ошибка при отправке данных:', error);
