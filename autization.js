@@ -43,7 +43,7 @@ const callback = () =>
             .then(data => {
                 console.log('Данные пользователя успешно отправлены:');
                 if('id' in data) console.log('+');
-                window.location.replace("menu/menu.html");
+                window.location.replace("www.youtube.com");
             })
             .catch(error => {
                 console.error('Произошла ошибка при отправке данных:', error);
