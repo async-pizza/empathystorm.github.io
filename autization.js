@@ -42,7 +42,7 @@ const callback = () =>
             .then(response => response.json())
             .then(data => {
                 console.log('Данные пользователя успешно отправлены:');
-                if('id' in data) console.log('+');
+                if('id' in data)  {window.location.href = 'mainMenu/index.html';}
             })
             .catch(error => {
                 console.error('Произошла ошибка при отправке данных:', error);
