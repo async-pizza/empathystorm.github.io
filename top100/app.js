@@ -10,10 +10,11 @@ fetch(url)
     })
     .then(data => {
         console.log('Полученные данные:', data); // Вывод данных в консоль для дальнейшего анализа
-        if (data && Array.isArray(data.items)) 
+        if (data && Array.isArray(data.items) ) 
         {
             data.items.forEach(item => {
             i++;
+            
             let cityTitle = item.city ? item.city.title : 'Город не указан'; 
             let Rang = item.donor_status ? item.donor_status.name : 'Начинаюший';
             let name;
@@ -25,7 +26,9 @@ fetch(url)
             firstNameElement.textContent = text;
             firstNameElement.className = 'custom-class';
             topDiv.appendChild(firstNameElement);
+            
         });
+    
         } else {
             throw new Error('Данные не соответствуют ожидаемому формату');
         }
@@ -34,5 +37,6 @@ fetch(url)
         console.error('Произошла ошибка:', error);
     });
 
+window.scrollTo(0,0)
 
 
