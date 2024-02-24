@@ -56,7 +56,7 @@ const callback = () =>
             data ={
             "email": email,
             "password": document.getElementById("password").value,
-            "first_name": document.getElementById("nameField").value,
+            "first_name": document.getElementById("namef").value,
             "tag": "string"
             }
             // Зачем нужен tag ?
